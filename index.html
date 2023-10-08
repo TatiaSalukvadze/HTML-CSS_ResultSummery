@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results summary</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: var(--very-light-blue, #ECF2FF);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+        #main{
+            width: 736px;
+            height: 512px;
+            background-color: white;
+            border-radius:32px;
+            display:flex;
+            
+        }
+        #blue{
+            width: 368px;
+            height: 100%;
+            border-radius:32px;
+            background: var(--gradient-1, linear-gradient(180deg, #75F 0%, #6943FF 0.01%, #2F2CE9 100%));
+            color: var(--light-blue, #CAC9FF);
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #cir{
+            width: 200px;
+            height: 200px;
+            background: var(--gradient-2, linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0.00) 100%, rgba(37, 33, 201, 0.00) 100%));
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color:white;
+        }
+        #main h2{
+            color:white;
+        }
+        #num{
+            font-size: 72px;
+            font-weight: 800;
+        }
+        #of100{
+            color: var(--light-blue, #CAC9FF);
+        }
+        #main #p1{
+            padding-bottom:30px;
+        }
+        #main #p2{
+            width: 260px;
+            text-align: center;
+            padding:0;
+        }
+        #sum{
+            margin:20px auto;
+            width: 288px;
+        }
+
+        button{
+            margin-top: 20px;
+             width: 288px;
+             border-radius: 128px;
+             height: 56px;
+             background-color: #303B59;
+             color:white;
+             border:0;
+             cursor: pointer;
+        }
+        .rect{
+            height: 56px;
+            border-radius: 12px;
+            padding:10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .rect #h{
+            margin-right:40%;
+        }
+        #r1{
+            background: var(--red-95-white, linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #F55);
+        }
+        #r1 #h{
+            color:#F55;
+        }
+         #r2{
+            background: var(--yellow-95-white, linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #FFB21E);
+        }
+        #r2 #h{
+            color:#FFB21E;
+        }
+         #r3{
+            background: var(--green-95-white, linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #00BB8F);
+
+        }
+        #r3 #h{
+            color:#00BB8F;
+        }
+         #r4{
+           background: var(--blue-95-white, linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #1125D6);
+        }
+        #r4 #h{
+            color:#1125D6;
+        }
+        @media (max-width: 700px) {
+            #blue{
+                width: 100%;
+                 border-top-left-radius: 0;
+                 border-top-right-radius: 0;
+            }
+            body{
+                margin:0;
+                height:auto;
+            }
+            #main{
+                border-radius:0;
+                width: 100vw;
+                height: auto;
+                flex-direction: column;
+            }
+            #sum, button{
+                width:80vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="blue">
+            <p id="p1">Your Results</p>
+            <div id="cir"><span id="num">76</span><span id="of100">of 100</span></div>
+            <h2>Great</h2>
+            <p id="p2">Your performance exceed 65% of the people conducting the test here!</p>
+        </div>
+        <div id="sum">
+            <h1>Summery</h1>
+            <div class="rect" id="r1">
+                <img src="./images/icon-reaction.svg"/>
+                <span id="h">Reaction</span>
+                <span><b>80</b> <span style="color:#303B59">/ 100</span></span>
+            </div>
+            <div class="rect" id="r2">
+                <img src="./images/icon-memory.svg" />
+                <span id="h">Memory</span>
+                <span><b>92</b> <span style="color:#303B59">/ 100</span></span>
+            </div>
+            <div class="rect" id="r3">
+                <img src="./images/icon-verbal.svg" />
+                <span id="h">Verbal</span>
+                <span><b>61</b><span style="color:#303B59">/ 100</span></span>
+            </div>
+            <div class="rect" id="r4">
+                <img src="./images/icon-visual.svg" />
+                <span id="h">Visual</span>
+                <span><b>73</b> <span style="color:#303B59">/ 100</span></span>
+            </div>
+            <button>Continue</button>
+        </div>
+    </div>
+</body>
+</html>
